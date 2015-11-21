@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <title>ally.element.disabled - ally.js</title>
+  <title>ally.element.disabled - ally.js</title><link rel="canonical" href="http:/allyjs.io/api/element/disabled.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../assets/website.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" data-noprefix="">
@@ -58,6 +58,14 @@
         
         <li><a href="#Contributing">Contributing</a></li>
         </ul></nav>
+      <aside>
+        <h1>Contribute to this page</h1>
+        <ul id="collaboration-links">
+          <li><a id="document-github-edit" href="https://github.com/medialize/ally.js/blob/master/docs/api/element/disabled.md">edit this page on github</a></li>
+          <li><a id="document-github-issue" data-title="ally.element.disabled" href="https://github.com/medialize/ally.js/issues/new?title=[ally.element.disabled]%20_your_problem_summary_">file an issue</a></li>
+          <li></li>
+        
+      </ul></aside>
       <aside>
         <nav id="collection-navigation">
         
@@ -345,7 +353,7 @@ var isDisabled = ally.element.disabled(element);
 <h2><a id="Examples" href="#Examples" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Examples</h2>
 <section class="example"><h1><a id="Example-ally-element-disabled-Example" href="#Example-ally-element-disabled-Example" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Example: ally.element.disabled Example</h1><a class="jsbin-embed" href="https:/jsbin.com/cagazu/embed?output">ally.element.disabled Example on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.35.3"></script><p><a href="https:/jsbin.com/cagazu/edit" target="_blank">play with the example on jsbin.com</a> or <a href="./disabled.example.html" target="_blank">open the source document</a></p></section>
 <h2><a id="Notes" href="#Notes" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Notes</h2>
-<div class="note"><strong>NOTE:</strong> In Google Chrome <code>&lt;audio controls&gt;</code> and <code>&lt;video controls&gt;</code> elements are made inert by removing the <code>controls</code> attribute - <a href="https://code.google.com/p/chromium/issues/detail?id=512133">Blink 512133</a></div><div class="warning"><strong>WARNING:</strong> Internet Explorer 10 - 11 leave a few disabled elements focusable and thus editable to the mouse, but not keyboard focusable <a href="https://connect.microsoft.com/IE/feedbackdetail/view/962368">Trident 962368</a>, <a href="https://connect.microsoft.com/IE/feedbackdetail/view/817488">Trident 817488</a> (ally.js does not fix that). One can prevent this wrong behavior by adding <code>:disabled { pointer-events: none; }</code>.</div>
+<div class="warning"><strong>WARNING:</strong> Internet Explorer 10 - 11 leave a few disabled elements focusable and thus editable to the mouse, but not keyboard focusable <a href="https://connect.microsoft.com/IE/feedbackdetail/view/962368">Trident 962368</a>, <a href="https://connect.microsoft.com/IE/feedbackdetail/view/817488">Trident 817488</a> (ally.js does not fix that). One can prevent this wrong behavior by adding <code>:disabled { pointer-events: none; }</code>.</div><div class="note"><strong>NOTE:</strong> In Google Chrome <code>&lt;audio controls&gt;</code> and <code>&lt;video controls&gt;</code> elements are made inert by removing the <code>controls</code> attribute - <a href="https://code.google.com/p/chromium/issues/detail?id=512133">Blink 512133</a></div>
 <h2><a id="Related-resources" href="#Related-resources" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Related resources</h2>
 <ul>
 <li><p><a href="../is/disabled.html"><code>ally.is.disabled</code></a> is able to identify elements disabled by <a href="#ally.element.disabled"><code>ally.element.disabled</code></a></p></li>

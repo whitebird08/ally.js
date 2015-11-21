@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <title>ally.style.focusWithin - ally.js</title>
+  <title>ally.style.focusWithin - ally.js</title><link rel="canonical" href="http:/allyjs.io/api/style/focus-within.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../assets/website.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" data-noprefix="">
@@ -58,6 +58,14 @@
         
         <li><a href="#Contributing">Contributing</a></li>
         </ul></nav>
+      <aside>
+        <h1>Contribute to this page</h1>
+        <ul id="collaboration-links">
+          <li><a id="document-github-edit" href="https://github.com/medialize/ally.js/blob/master/docs/api/style/focus-within.md">edit this page on github</a></li>
+          <li><a id="document-github-issue" data-title="ally.style.focusWithin" href="https://github.com/medialize/ally.js/issues/new?title=[ally.style.focusWithin]%20_your_problem_summary_">file an issue</a></li>
+          <li></li>
+        
+      </ul></aside>
       <aside>
         <nav id="collection-navigation">
         
@@ -346,7 +354,7 @@ handle.disengage();
 <h2><a id="Examples" href="#Examples" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Examples</h2>
 <section class="example"><h1><a id="Example-ally-style-focusWithin-Example" href="#Example-ally-style-focusWithin-Example" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Example: ally.style.focusWithin Example</h1><a class="jsbin-embed" href="https:/jsbin.com/qohalu/embed?output">ally.style.focusWithin Example on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.35.3"></script><p><a href="https:/jsbin.com/qohalu/edit" target="_blank">play with the example on jsbin.com</a> or <a href="./focus-within.example.html" target="_blank">open the source document</a></p></section>
 <h2><a id="Notes" href="#Notes" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Notes</h2>
-<div class="note"><strong>NOTE:</strong> The focus-within class is added asynchronously in Shadow DOM, but synchronously for the document.</div><div class="note"><strong>NOTE:</strong> Firefox 34 does not expose <code>ShadowRoot.host</code>, coupled with <code>document.activeElement</code> pointing to the wrong element, we cannot find the first ShadowHost and can thus not apply <code>focus-within</code> properly. The <code>ShadowRoot.host</code> issue has been fixed in Firefox 37 (at the latest).</div><div class="note"><strong>NOTE:</strong> In Firefox the <a href="about:config">setting</a> <code>dom.webcomponents.enabled</code> needs to be set to <code>true</code> to enable ShadowDOM support.</div>
+<div class="note"><strong>NOTE:</strong> In Firefox the <a href="about:config">setting</a> <code>dom.webcomponents.enabled</code> needs to be set to <code>true</code> to enable ShadowDOM support.</div><div class="note"><strong>NOTE:</strong> Firefox 34 does not expose <code>ShadowRoot.host</code>, coupled with <code>document.activeElement</code> pointing to the wrong element, we cannot find the first ShadowHost and can thus not apply <code>focus-within</code> properly. The <code>ShadowRoot.host</code> issue has been fixed in Firefox 37 (at the latest).</div><div class="note"><strong>NOTE:</strong> The focus-within class is added asynchronously in Shadow DOM, but synchronously for the document.</div>
 <h2><a id="Related-resources" href="#Related-resources" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Related resources</h2>
 <ul>
 <li><a href="http://dev.w3.org/csswg/selectors-4/#the-focus-within-pseudo">Selectors Level 4: <code>:focus-within</code> Pseudo-class</a></li>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <title>Accessible dialog tutorial - ally.js</title>
+  <title>Accessible dialog tutorial - ally.js</title><link rel="canonical" href="http:/allyjs.io/tutorials/accessible-dialog.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/website.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" data-noprefix="">
@@ -56,6 +56,14 @@
         <li><a href="#Interactive-demo">Interactive demo</a></li>
         </ul></nav>
       <aside>
+        <h1>Contribute to this page</h1>
+        <ul id="collaboration-links">
+          <li><a id="document-github-edit" href="https://github.com/medialize/ally.js/blob/master/docs/tutorials/accessible-dialog.md">edit this page on github</a></li>
+          <li><a id="document-github-issue" data-title="Accessible dialog tutorial" href="https://github.com/medialize/ally.js/issues/new?title=[Accessible%20dialog%20tutorial]%20_your_problem_summary_">file an issue</a></li>
+          <li></li>
+        
+      </ul></aside>
+      <aside>
         <nav id="collection-navigation">
         
           <h1>More in <em>Tutorials</em></h1><ul>
@@ -76,7 +84,7 @@
     <main id="main" tabindex="-1">
       <h1><a id="Accessible-dialog-tutorial" href="#Accessible-dialog-tutorial" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Accessible dialog tutorial</h1>
 <p>This document explains what steps need to be taken in order to make a visually compelling, yet fully accessible dialog according to <a href="http://www.w3.org/WAI/PF/aria-practices/#dialog_modal">WAI-ARIA 1.0 Authoring Practices</a>.</p>
-<p>HTML5.1 specifies the <a href="http://www.w3.org/TR/html51/interactive-elements.html#the-dialog-element"><code>&lt;dialog&gt;</code> element</a> that natively does most of what is explained here. But since <a href="http://caniuse.com/#feat=dialog">browser support</a> is rather limited, making use of <code>&lt;dialog&gt;</code> is not yet possible.</p>
+<p>HTML5.1 specifies the <a href="http://www.w3.org/TR/html51/semantics.html#the-dialog-element"><code>&lt;dialog&gt;</code> element</a> that natively does most of what is explained here. But since <a href="http://caniuse.com/#feat=dialog">browser support</a> is rather limited, making use of <code>&lt;dialog&gt;</code> is not yet possible.</p>
 <p>The code discussed in this tutorial is available in <a href="./dialog.example.html">ally.js Dialog Example</a> and can be <a href="#Interactive-demo">interacted with</a> below.</p>
 <h2><a id="The-visual-effect" href="#The-visual-effect" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>The visual effect</h2>
 <p>Before we get into the technical things, let&apos;s first discuss what a dialog is. From a user experience perspective it is a piece of information, or a set of interactions, provided to the user in a way that disrupts the user&apos;s current interaction. The user is made to focus on the dialog&apos;s content and ignore the rest of the application or website. Visually this is usually achieved by layering a box in the visual center of the application and by positioning a translucent layer (i.e. showing the content behind it, but in a distorted manner) behind the dialog, to emphasize that the layer is the only important thing.</p>
@@ -310,7 +318,7 @@ function closeDialog() {
 openButton.addEventListener(&apos;click&apos;, openDialog, false);
 closeButton.addEventListener(&apos;click&apos;, closeDialog, false);
 </code></pre>
-<h3><a id="Trapping-docus-inside-the-dialog" href="#Trapping-docus-inside-the-dialog" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Trapping docus inside the dialog</h3>
+<h3><a id="Trapping-focus-inside-the-dialog" href="#Trapping-focus-inside-the-dialog" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Trapping focus inside the dialog</h3>
 <p>While a dialog is shown, we need to make sure that elements outside of the dialog cannot be interacted with. The backdrop achieves this for the mouse, as you&apos;re unable to click on anything anymore. But for other means of input, like the keyboard, elements are still accessible simply by hitting the <kbd>Tab</kbd> key often enough to reach them.</p>
 <p>A naive implementation might listen to <code>keydown</code> events, filtering for <kbd>Tab</kbd> and <kbd>Shift Tab</kbd> to shift focus to the <em>first</em> element when focus would leave the dialog at the end, or shift focus to the <em>last</em> element, when focus would leave the dialog at its beginning. But this approach has a few problems:</p>
 <ul>
@@ -482,7 +490,7 @@ function openDialog() {
 }
 </code></pre>
 <h2><a id="Interactive-demo" href="#Interactive-demo" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Interactive demo</h2>
-<section class="example"><h1><a id="Example-Dialog-Tutorial" href="#Example-Dialog-Tutorial" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Example: Dialog Tutorial</h1><a class="jsbin-embed" href="https:/jsbin.com/qawasag/embed?output">Dialog Tutorial on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.35.3"></script><p><a href="https:/jsbin.com/qawasag/edit" target="_blank">play with the example on jsbin.com</a> or <a href="./dialog.example.html" target="_blank">open the source document</a></p></section>
+<div class="note"><strong>NOTE:</strong> Focus is only trapped inside of the embedded iframe. The iframe&apos;s content cannot change this page in any way.</div><section class="example"><h1><a id="Example-Dialog-Tutorial" href="#Example-Dialog-Tutorial" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Example: Dialog Tutorial</h1><a class="jsbin-embed" href="https:/jsbin.com/qawasag/embed?output">Dialog Tutorial on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.35.3"></script><p><a href="https:/jsbin.com/qawasag/edit" target="_blank">play with the example on jsbin.com</a> or <a href="./dialog.example.html" target="_blank">open the source document</a></p></section>
 
     </main>
   </div>

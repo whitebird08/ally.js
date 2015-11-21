@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <title>ally.is.focusRelevant - ally.js</title>
+  <title>ally.is.focusRelevant - ally.js</title><link rel="canonical" href="http:/allyjs.io/api/is/focus-relevant.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../assets/website.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" data-noprefix="">
@@ -55,6 +55,14 @@
         
         <li><a href="#Contributing">Contributing</a></li>
         </ul></nav>
+      <aside>
+        <h1>Contribute to this page</h1>
+        <ul id="collaboration-links">
+          <li><a id="document-github-edit" href="https://github.com/medialize/ally.js/blob/master/docs/api/is/focus-relevant.md">edit this page on github</a></li>
+          <li><a id="document-github-issue" data-title="ally.is.focusRelevant" href="https://github.com/medialize/ally.js/issues/new?title=[ally.is.focusRelevant]%20_your_problem_summary_">file an issue</a></li>
+          <li></li>
+        
+      </ul></aside>
       <aside>
         <nav id="collection-navigation">
         
@@ -322,7 +330,7 @@ var isFocusRelevant = ally.is.focusRelevant(element);
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> if <code>element</code> argument is not of type <code>HTMLElement</code>.</p>
 
 <h2><a id="Notes" href="#Notes" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Notes</h2>
-<div class="warning"><strong>WARNING:</strong> WebKit and Blink make any <code>SVGElement</code> focusable that has a <code>focus</code> event listener attached, see <a href="https://code.google.com/p/chromium/issues/detail?id=445798">Blink 445798</a>, <a href="https://bugs.webkit.org/show_bug.cgi?id=140024">WebKit 140024</a></div><div class="warning"><strong>WARNING:</strong> Firefox and Internet Explorer cannot focus <code>SVGElement</code>s by script, thus no SVG element is considered focusable, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1116966">Gecko 1116966</a></div><div class="note"><strong>NOTE:</strong> Because the <code>&lt;keygen&gt;</code> element is poorly supported, practically never used and has seen <a href="https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/pX5NbX0Xack/kmHsyMGJZAMJ">intent to deprecate</a>, it is <em>not</em> considered focusable by ally.js.</div><div class="note"><strong>NOTE:</strong> The <code>&lt;body&gt;</code> element may mistakenly considered focusable, because it is the default activeElement if no other element has focus - but it is not focusable, unless made so by adding the <code>tabindex</code> attribute.</div>
+<div class="note"><strong>NOTE:</strong> The <code>&lt;body&gt;</code> element may mistakenly considered focusable, because it is the default activeElement if no other element has focus - but it is not focusable, unless made so by adding the <code>tabindex</code> attribute.</div><div class="note"><strong>NOTE:</strong> Because the <code>&lt;keygen&gt;</code> element is poorly supported, practically never used and has seen <a href="https://groups.google.com/a/chromium.org/forum/m/#!msg/blink-dev/pX5NbX0Xack/kmHsyMGJZAMJ">intent to deprecate</a>, it is <em>not</em> considered focusable by ally.js.</div><div class="warning"><strong>WARNING:</strong> Firefox and Internet Explorer cannot focus <code>SVGElement</code>s by script, thus no SVG element is considered focusable, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1116966">Gecko 1116966</a></div><div class="warning"><strong>WARNING:</strong> WebKit and Blink make any <code>SVGElement</code> focusable that has a <code>focus</code> event listener attached, see <a href="https://code.google.com/p/chromium/issues/detail?id=445798">Blink 445798</a>, <a href="https://bugs.webkit.org/show_bug.cgi?id=140024">WebKit 140024</a></div>
 <h2><a id="Related-resources" href="#Related-resources" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Related resources</h2>
 <ul>
 <li><p><a href="focusable.html"><code>ally.is.focusable</code></a> tests focus-relevant elements if they&apos;re also visible and not disabled</p></li>

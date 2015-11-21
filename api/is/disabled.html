@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <title>ally.is.disabled - ally.js</title>
+  <title>ally.is.disabled - ally.js</title><link rel="canonical" href="http:/allyjs.io/api/is/disabled.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../assets/website.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" data-noprefix="">
@@ -52,6 +52,14 @@
         
         <li><a href="#Contributing">Contributing</a></li>
         </ul></nav>
+      <aside>
+        <h1>Contribute to this page</h1>
+        <ul id="collaboration-links">
+          <li><a id="document-github-edit" href="https://github.com/medialize/ally.js/blob/master/docs/api/is/disabled.md">edit this page on github</a></li>
+          <li><a id="document-github-issue" data-title="ally.is.disabled" href="https://github.com/medialize/ally.js/issues/new?title=[ally.is.disabled]%20_your_problem_summary_">file an issue</a></li>
+          <li></li>
+        
+      </ul></aside>
       <aside>
         <nav id="collection-navigation">
         
@@ -318,7 +326,7 @@ var isDisabled = ally.is.disabled(element);
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> if <code>element</code> argument is not of type <code>HTMLElement</code>.</p>
 
 <h2><a id="Notes" href="#Notes" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Notes</h2>
-<div class="note"><strong>NOTE:</strong> WebKit and Blink do not properly support disabling <code>&lt;fieldset tabindex=&quot;0&quot; disabled&gt;</code> elements themselves, while descendant form elements are properly disabled, see <a href="https://code.google.com/p/chromium/issues/detail?id=453847">Blink 453847</a>, <a href="https://bugs.webkit.org/show_bug.cgi?id=141086">Webkit 141086</a></div><div class="note"><strong>NOTE:</strong> The <code>&lt;fieldset&gt;</code> element can be disabled, inheriting the state onto all form elements it contains.</div>
+<div class="note"><strong>NOTE:</strong> The <code>&lt;fieldset&gt;</code> element can be disabled, inheriting the state onto all form elements it contains.</div><div class="note"><strong>NOTE:</strong> WebKit and Blink do not properly support disabling <code>&lt;fieldset tabindex=&quot;0&quot; disabled&gt;</code> elements themselves, while descendant form elements are properly disabled, see <a href="https://code.google.com/p/chromium/issues/detail?id=453847">Blink 453847</a>, <a href="https://bugs.webkit.org/show_bug.cgi?id=141086">Webkit 141086</a></div>
 <h2><a id="Related-resources" href="#Related-resources" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Related resources</h2>
 <ul>
 <li><p><a href="../element/disabled.html"><code>ally.element.disabled</code></a> can disable <em>any</em> interactive element</p></li>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <title>Getting started - ally.js</title>
+  <title>Getting started - ally.js</title><link rel="canonical" href="http:/allyjs.io/getting-started.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/website.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" data-noprefix="">
@@ -62,6 +62,14 @@
         <li><a href="#Using-AMD-modules">Using AMD modules</a></li>
         </ul></nav>
       <aside>
+        <h1>Contribute to this page</h1>
+        <ul id="collaboration-links">
+          <li><a id="document-github-edit" href="https://github.com/medialize/ally.js/blob/master/docs/getting-started.md">edit this page on github</a></li>
+          <li><a id="document-github-issue" data-title="Getting started" href="https://github.com/medialize/ally.js/issues/new?title=[Getting%20started]%20_your_problem_summary_">file an issue</a></li>
+          <li></li>
+        
+      </ul></aside>
+      <aside>
         <nav id="collection-navigation">
         
           <h1>More in <em>Getting Started</em></h1><ul>
@@ -101,6 +109,13 @@
 <h2><a id="Loading-the-UMD-bundle-from-CDN" href="#Loading-the-UMD-bundle-from-CDN" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Loading the UMD bundle from CDN</h2>
 <p>ally.js is made available for production use by <a href="http://www.jsdelivr.com/projects/ally.js">jsDelivr</a>:</p>
 <pre><code class="language-markup">&lt;script src=&quot;https://cdn.jsdelivr.net/ally.js/1.0.1/ally.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  console.log(&quot;loaded ally.js in version&quot;, ally.version);
+  console.log(&quot;focusable elements&quot;, ally.query.focusable());
+&lt;/script&gt;
+</code></pre>
+<p>ally.js is also available for production use by <a href="https://cdnjs.com/libraries/ally.js">cdnjs</a>:</p>
+<pre><code class="language-markup">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/ally.js/1.0.1/ally.min.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
   console.log(&quot;loaded ally.js in version&quot;, ally.version);
   console.log(&quot;focusable elements&quot;, ally.query.focusable());
