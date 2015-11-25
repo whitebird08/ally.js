@@ -361,7 +361,7 @@ var keyHandle;
 
 function openDialog() {
   // React to enter and escape keys as mandated by ARIA Practices
-  keyHandle = whenKey({
+  keyHandle = ally.when.key({
     escape: closeDialogByKey,
   });
 
@@ -396,7 +396,7 @@ function saveDialog(event) {
 dialog.addEventListener(&apos;submit&apos;, saveDialog, true);
 </code></pre>
 <h3><a id="Focus-first-focusable-element-upon-opening-the-dialog" href="#Focus-first-focusable-element-upon-opening-the-dialog" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Focus first focusable element upon opening the dialog</h3>
-<p>Once a dialog is opened, the first keyboard focusable (tabbable) element should receive focus. In order to accomplish this, you need to know which elements are keyboard focusable. There is no native DOM method to obtain such a list. ally.js has got you covered with <a href="../api/query/tabbable.html"><code>ally.query.tabbable</code></a>. Since the <em>order</em> of elements is significant here, we need to sort the focusable elements by <code>tabindex</code> and <code>autofocus</code> attributes. ally.js provides the method <a href="../api/query/first-tabbable.html"><code>ally.query.firstTabbable</code></a> to do all that for you:</p>
+<p>Once a dialog is opened, the first keyboard focusable (tabbable) element should receive focus (in order to shift <a href="../concepts.html#Virtual-focus">virtual focus</a>). In order to accomplish this, you need to know which elements are keyboard focusable. There is no native DOM method to obtain such a list. ally.js has got you covered with <a href="../api/query/tabbable.html"><code>ally.query.tabbable</code></a>. Since the <em>order</em> of elements is significant here, we need to sort the focusable elements by <code>tabindex</code> and <code>autofocus</code> attributes. ally.js provides the method <a href="../api/query/first-tabbable.html"><code>ally.query.firstTabbable</code></a> to do all that for you:</p>
 <pre><code class="language-javascript">var dialog = document.getElementById(&apos;dialog&apos;);
 
 function openDialog() {
