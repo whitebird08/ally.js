@@ -42,6 +42,9 @@
     <div id="navigation-column">
         <nav id="table-of-contents"><h1>On this page</h1><ul>
         <li><a href="#Publishing-the-library-to-npm">Publishing the library to npm</a></li>
+        
+        
+        <li><a href="#Branch-Rules">Branch Rules</a></li>
         </ul></nav>
       <aside>
         <h1>Contribute to this page</h1>
@@ -109,7 +112,14 @@
 <li>upload the files <code>dist/ally.js</code>, <code>dist/ally.js.map</code> and <code>dist/ally.js.zip</code></li>
 <li>mark as <code>pre-release</code> if the library was pushed to beta channel</li>
 </ul></li>
+<li><code>git checkout release &amp;&amp; git merge master &amp;&amp; git push --no-verify</code> to update the &quot;latest stable release&quot; branch</li>
 <li><code>npm run publish:website</code> to publish the website to the <code>gh-pages</code> branch</li>
+</ul>
+<h2><a id="Branch-Rules" href="#Branch-Rules" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Branch Rules</h2>
+<ul>
+<li><code>master</code> contains fully integrated work that may not be released yet. All PRs have to point at this branch.</li>
+<li><code>release</code> contains the library state of the last release. Additionally certain website or documentation related commits may be cherry-picked from <code>master</code> to retain ability to update the website (without leaking unreleased things from <code>master</code>). PRs against this branch must be rejected.</li>
+<li><code>gh-pages</code> contains the website. It is only updated through <code>npm run publish:website</code>. PRs against this branch must be rejected.</li>
 </ul>
 <hr>
 <div class="help"><strong>HELP:</strong> Got a better Idea to solve this? <a href="https://github.com/medialize/ally.js/issues/new">file an issue</a>!</div>

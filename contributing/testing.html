@@ -124,6 +124,7 @@ node test/run-local.js \
   suites=test/unit/selected-test \
   functionalSuites=tests/functional/selected-test
 </code></pre>
+<div class="note"><strong>NOTE:</strong> The tests run off <code>dist/amd</code> and require the <code>reports</code> directory to exist. Before running running the tests, you need to have run <code>npm run clean</code> and <code>npm run build:amd</code> at least once.</div>
 <h2><a id="Remotely-running-all-tests-in-all-browsers" href="#Remotely-running-all-tests-in-all-browsers" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Remotely running all tests in all browsers</h2>
 <p>You can register your own SauceLabs account (there is a <a href="https://saucelabs.com/signup/plan/free">free tier</a>) and provide your own credentials if you don&apos;t have access to the project&apos;s account. The same is true for <a href="http://browserstack.com/">BrowserStack</a>.</p>
 <h3><a id="Running-tests-on-BrowserStack" href="#Running-tests-on-BrowserStack" class="link-to-headline" aria-label="link to headline">&#x1F517;</a>Running tests on BrowserStack</h3>
