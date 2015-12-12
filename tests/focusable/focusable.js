@@ -24,6 +24,21 @@ function ignoreByAttribute(element) {
   return element.getAttribute('data-label') !== 'ignore';
 }
 
+function getContentDocument(element) {
+  try {
+    // works on <object> and <iframe>
+    return element.contentDocument
+      // works on <object> and <iframe>
+      || element.contentWindow && element.contentWindow.document
+      // works on <object> and <iframe> that contain SVG
+      || element.getSVGDocument && element.getSVGDocument();
+  } catch(e) {
+    // IE may throw member not found exception
+    // e.g. on <object type="image/png">
+    return null;
+  }
+}
+
 function captureStuff() {
   var results = {
     platform: null,
@@ -47,8 +62,20 @@ function captureStuff() {
     },
   };
 
+  // all elements of the document
   var elements = [].slice.call(document.documentElement.querySelectorAll('*'), 0);
+  // including the <html>
   elements.unshift(document.documentElement);
+  // and all <iframe>, <object> and <embed> document contents
+  [].forEach.call(document.querySelectorAll('iframe, object, embed'), function(element) {
+    var _document = getContentDocument(element);
+    if (!_document || !_document.documentElement) {
+      return;
+    }
+
+    var _elements = [].slice.call(_document.documentElement.querySelectorAll('*'), 0);
+    elements.push.apply(elements, _elements);
+  });
 
   var activeElementHistory = [];
   var focusEventHistory = [];
